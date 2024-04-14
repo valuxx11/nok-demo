@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Web App</title>
+    <!-- Add any CSS or external stylesheets here -->
+</head>
+<body>
+    <h1>Sentiment Analysis Web App</h1>
+    <form method="POST">
+        <label for="user_input">Enter your text:</label><br>
+        <input type="text" id="user_input" name="user_input" required><br>
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+    {% if sentiment %}
+        <h2>Sentiment Analysis Result:</h2>
+        <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+        <p><strong>Score:</strong> {{ score }}</p>
+    {% endif %}
+</body>
+</html>
